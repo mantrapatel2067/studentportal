@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Feedback Form</title>
+</head>
+<body>
+    <center>
+        <table border="0" width="50%" cellpadding="10" style="margin-top:40px;">
+            <tr>
+                <td align="center">
+                    <font size="7"><b>Website Feedback</b></font>
+                </td>
+            </tr>
+        </table>
+        <form id="feedbackForm" autocomplete="off" onsubmit="return false;">
+            <table border="1" width="40%" cellpadding="10" align="center">
+                <tr bgcolor="#e6f2ff"><th colspan="2">Feedback Form</th></tr>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td><input type="text" id="name" name="name" required placeholder="Your Name"></td>
+                </tr>
+                <tr>
+                    <td><b>Email</b></td>
+                    <td><input type="email" id="email" name="email" required placeholder="Your Email"></td>
+                </tr>
+                <tr>
+                    <td><b>How do you rate our website?</b></td>
+                    <td>
+                        <select id="rating" name="rating" required>
+                            <option value="">-- Select --</option>
+                            <option value="Excellent">Excellent</option>
+                            <option value="Good">Good</option>
+                            <option value="Average">Average</option>
+                            <option value="Poor">Poor</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Comments</b></td>
+                    <td><textarea id="comments" name="comments" placeholder="Your feedback..." required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button type="submit">Submit Feedback</button></td>
+                </tr>
+            </table>
+        </form>
+        <div id="successMsg" style="color:green; margin-top:12px; display:none; font-weight:bold;">Thank you for your feedback!</div>
+        <br>
+        <table border="0" width="40%" align="center">
+            <tr><td align="center">
+                <hr width="60%">
+                <b>📍 CHARUSAT Campus, Off Nadiad-Petlad Highway, Changa–388421, Anand, Gujarat, India</b><br>
+                📞 +91 2697 265011 • ✉️ info@charusat.ac.in<br>
+                © 2025 CHARUSAT University. All rights reserved.
+            </td></tr>
+        </table>
+    </center>
+    <script>
+        document.getElementById('feedbackForm').onsubmit = function() {
+            document.getElementById('successMsg').style.display = 'block';
+            document.getElementById('feedbackForm').reset();
+            setTimeout(function() {
+                document.getElementById('successMsg').style.display = 'none';
+            }, 3000);
+            return false;
+        };
+    </script>
+</body>
+</html>
