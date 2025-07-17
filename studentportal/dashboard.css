@@ -1,0 +1,146 @@
+/* Root and Theme */
+:root {
+  --primary: #0077b6;
+  --bg-light: #f8f9fa;
+  --text-dark: #1a1a1a;
+  --accent: #00b4d8;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* Header */
+.site-header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navigation */
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #e0f7fa;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  background-color: #d0f0ff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  justify-items: center;  /* Center images in grid */
+  max-width: 900px;       /* Keeps it centered on large screens */
+}
+
+.image-gallery img {
+  width: 100%;
+  max-width: 350px;       /* Optional: limit max size */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.03); /* Smooth hover zoom */
+}
+
+
+/* Sections */
+section {
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+  color: var(--primary);
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+/* Cards */
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.info-card {
+  flex: 1 1 30%;
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.info-card ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.info-card a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.info-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  section {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .info-card {
+    flex: 1 1 100%;
+  }
+}
